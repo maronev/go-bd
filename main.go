@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"github.com/maronev/go-bd/storage"
 )
 
 func main() {
-	fmt.Println("Hola mundo")
-
+	storage.NewPostgresDB()
+	storage.NewPostgresDB()
+	storage.NewPostgresDB()
 }

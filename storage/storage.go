@@ -1,10 +1,12 @@
-package Storage
+package storage
 
 import (
 	"database/sql"
 	"fmt"
 	"log"
 	"sync"
+
+	_ "github.com/lib/pq"
 )
 
 var (
