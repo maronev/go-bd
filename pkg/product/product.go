@@ -2,7 +2,7 @@ package product
 
 import "time"
 
-//Model of product
+// Model of product
 type Model struct {
 	ID           uint
 	Name         string
@@ -15,9 +15,10 @@ type Model struct {
 type Models []*Model
 
 type Storage interface {
-	Create(*Model) error
-	Update(*Model) error
-	GetAll(*Model) error
-	GetById(uint) error
-	Delete(uint) error
+	Storage() error
+	//Create(*Model) error
+	//Update(*Model) error
+	//GetAll(*Model) error
+	//GetById(uint) error
+	//Delete(uint) error
 }

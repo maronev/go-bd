@@ -17,12 +17,15 @@ var (
 func NewPostgresDB() {
 	once.Do(func() {
 		var err error
-		db, err := sql.Open("postgres", "postgres://admin:admin@localhost:5432/db-go?sslmode=disable")
+		db, err = sql.Open("postgres", "postgres://postgres:admin@localhost:5432/db-go?sslmode=disable")
+		//db, err = sql.Open("postgres", "postgres://postgres:xxx@localhost:5432/db-go?sslmode=disable")
+
 		if err != nil {
-			panic(err)
+			log.Fatalf("antes de panico: %v", err)
+			//panic(err)
 		}
 
-		if err := db.Ping(); err != nil {
+		if err = db.Ping(); err != nil {
 			log.Fatalf("can't do ping: %v", err)
 		}
 

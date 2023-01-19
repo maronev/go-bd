@@ -8,4 +8,10 @@ func main() {
 	storage.NewPostgresDB()
 	storage.NewPostgresDB()
 	storage.NewPostgresDB()
+	storage.NewPostgresDB()
+	storage.NewPostgresDB()
+	storage.NewPostgresDB()
+	storage.NewPostgresDB()
+	storage.NewPostgresDB()
+	storage.NewPostgresDB()
 }
